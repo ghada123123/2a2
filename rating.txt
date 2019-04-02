@@ -1,0 +1,14 @@
+create table `item_rating`
+(
+`ratingId` int(11) not null,
+`itemId` int(11) not null,
+`userId` int(11) not null,
+`ratingNumber` int(11) not null,
+`title` varchar(255) COLLATE utf8_unicode_ci not null,
+`comments` datetime not null,
+`created` datetime not null,
+`status` tinyint(1) not null default'1' comment '1 =Block, 0 = Unblock'
+)
+ENGINE=InnoDB default charset=utf8 collate=utf8_unicode_ci;
+alter table `item_rating`
+ADD primary key(`ratingId`);
